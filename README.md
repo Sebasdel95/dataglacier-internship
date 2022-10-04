@@ -1,2 +1,2 @@
-# dataglacier-iternship
+# dataglacier-internship
 Weekly assignments of Data Glacier Internship
