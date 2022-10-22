@@ -1,0 +1,27 @@
+{
+"type": "FeatureCollection",
+"name": "cities_centroids",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "City": "PHOENIX AZ", "City_Population": " 943,999 ", "City_Users": " 6,133 " }, "geometry": { "type": "Point", "coordinates": [ -112.072104045442856, 33.542591858016586 ] } },
+{ "type": "Feature", "properties": { "City": "TUCSON AZ", "City_Population": " 631,442 ", "City_Users": " 5,712 " }, "geometry": { "type": "Point", "coordinates": [ -110.892361420159204, 32.19589280031451 ] } },
+{ "type": "Feature", "properties": { "City": "LOS ANGELES CA", "City_Population": " 1,595,037 ", "City_Users": " 144,132 " }, "geometry": { "type": "Point", "coordinates": [ -118.412113928394874, 34.112108844309809 ] } },
+{ "type": "Feature", "properties": { "City": "ORANGE COUNTY", "City_Population": " 1,030,185 ", "City_Users": " 12,994 " }, "geometry": { "type": "Point", "coordinates": [ -117.824888159198153, 33.805266497503276 ] } },
+{ "type": "Feature", "properties": { "City": "SILICON VALLEY", "City_Population": " 1,177,609 ", "City_Users": " 27,247 " }, "geometry": { "type": "Point", "coordinates": [ -122.140428940851066, 37.399140054766015 ] } },
+{ "type": "Feature", "properties": { "City": "SACRAMENTO CA", "City_Population": " 545,776 ", "City_Users": " 7,044 " }, "geometry": { "type": "Point", "coordinates": [ -121.468425622319899, 38.566755632025782 ] } },
+{ "type": "Feature", "properties": { "City": "SAN DIEGO CA", "City_Population": " 959,307 ", "City_Users": " 69,995 " }, "geometry": { "type": "Point", "coordinates": [ -117.136636219925762, 32.814998946495919 ] } },
+{ "type": "Feature", "properties": { "City": "SAN FRANCISCO CA", "City_Population": " 629,591 ", "City_Users": " 213,609 " }, "geometry": { "type": "Point", "coordinates": [ -122.431601683678934, 37.771963937383369 ] } },
+{ "type": "Feature", "properties": { "City": "DENVER CO", "City_Population": " 754,233 ", "City_Users": " 12,421 " }, "geometry": { "type": "Point", "coordinates": [ -104.873186960247068, 39.768021953568017 ] } },
+{ "type": "Feature", "properties": { "City": "WASHINGTON DC", "City_Population": " 418,859 ", "City_Users": " 127,001 " }, "geometry": { "type": "Point", "coordinates": [ -77.015865578856875, 38.905161663213995 ] } },
+{ "type": "Feature", "properties": { "City": "MIAMI FL", "City_Population": " 1,339,155 ", "City_Users": " 17,675 " }, "geometry": { "type": "Point", "coordinates": [ -80.210615543709054, 25.776043835020747 ] } },
+{ "type": "Feature", "properties": { "City": "ATLANTA GA", "City_Population": " 814,885 ", "City_Users": " 24,701 " }, "geometry": { "type": "Point", "coordinates": [ -84.422520177257439, 33.763006367264964 ] } },
+{ "type": "Feature", "properties": { "City": "CHICAGO IL", "City_Population": " 1,955,130 ", "City_Users": " 164,468 " }, "geometry": { "type": "Point", "coordinates": [ -87.685018215574644, 41.837082841091316 ] } },
+{ "type": "Feature", "properties": { "City": "BOSTON MA", "City_Population": " 248,968 ", "City_Users": " 80,021 " }, "geometry": { "type": "Point", "coordinates": [ -71.062461750202786, 42.351151322903419 ] } },
+{ "type": "Feature", "properties": { "City": "NEW YORK NY", "City_Population": " 8,405,837 ", "City_Users": " 302,149 " }, "geometry": { "type": "Point", "coordinates": [ -73.943431192268875, 40.669903385553056 ] } },
+{ "type": "Feature", "properties": { "City": "PITTSBURGH PA", "City_Population": " 542,085 ", "City_Users": " 3,643 " }, "geometry": { "type": "Point", "coordinates": [ -79.976476700397512, 40.439276149395745 ] } },
+{ "type": "Feature", "properties": { "City": "NASHVILLE TN", "City_Population": " 327,225 ", "City_Users": " 9,270 " }, "geometry": { "type": "Point", "coordinates": [ -86.784827781814244, 36.17160646071796 ] } },
+{ "type": "Feature", "properties": { "City": "AUSTIN TX", "City_Population": " 698,371 ", "City_Users": " 14,978 " }, "geometry": { "type": "Point", "coordinates": [ -97.750805867572225, 30.306086955411697 ] } },
+{ "type": "Feature", "properties": { "City": "DALLAS TX", "City_Population": " 942,908 ", "City_Users": " 22,157 " }, "geometry": { "type": "Point", "coordinates": [ -96.765527056759836, 32.794279600125911 ] } },
+{ "type": "Feature", "properties": { "City": "SEATTLE WA", "City_Population": " 671,238 ", "City_Users": " 25,063 " }, "geometry": { "type": "Point", "coordinates": [ -122.351564368051314, 47.62162041478755 ] } }
+]
+}
