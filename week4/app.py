@@ -17,14 +17,16 @@ def predict():
     """
     Predict with the data entered in the html page.
     """
-    int_features = [int(x) for x in request.form.values()]
-    final_features= [np.array(int_features)]
+    in_features = [x for x in request.form.values()]
+    final_features= [np.array(in_features)]
     prediction = model.predict(final_features)
 
-    if round(prediction[0]) == 0:
-        return render_template("index.html", prediction_text="The user will pay the debt")
+    if round(prediction[0]) == 1:
+        return render_template("index.html", prediction_text="The user won't fully pay the loan")
     else:
-        return render_template("index.html", prediction_text="The user won't pay the debt")
+        return render_template("index.html", prediction_text="The user will fully pay the loan")
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
+
+
