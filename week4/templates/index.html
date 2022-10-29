@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html >
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+
+  <title>ML API</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/floating-labels/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post" >
+      <div class="text-center mb-4">
+        <h1 class="Loans Predictor">Floating labels</h1>
+        <p>Predict if a person will pay a loan</p>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="credit_policy">
+          Credit Policy
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="credit_policy" name="credit_policy" class="form-control" placeholder="Credit Policy" required autofocus>
+          <small class="form-text text-muted">
+            1 if the customer meets the credit underwriting criteria, 0 otherwise
+          </small>
+        </div>
+      </div>
+          
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="int_rate">
+          Interest rate
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="int_rate" name="int_rate" class="form-control" placeholder="Interest rate" required autofocus>
+          <small class="form-text text-muted">
+            Interest rate of the loan
+          </small>
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="installment">
+          Installment
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="installment" name="installment" class="form-control" placeholder="Installment" required autofocus>
+          <small class="form-text text-muted">
+            The monthly installments owed by the borrower
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="log_annual_inc">
+          Log Annual Income
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="log_annual_inc" name="log_annual_inc" class="form-control" placeholder="Log Annual Income" required autofocus>
+          <small class="form-text text-muted">
+            Natural log of the self-reported annual income of the borrower
+          </small>
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="dti">
+          Debt-to-Income
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="dti" name="dti" class="form-control" placeholder="Debt-to-Income" required autofocus>
+          <small class="form-text text-muted">
+            The debt-to-income ratio of the borrower (amount of debt divided by annual income)
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="fico">
+          FICO
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="fico" name="fico" class="form-control" placeholder="FICO" required autofocus>
+          <small class="form-text text-muted">
+            FICO credit score of the borrower
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="days_with_cr_line">
+          Days with Credit Line
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="days_with_cr_line" name="days_with_cr_line" class="form-control" placeholder="Days with Credit Line" required autofocus>
+          <small class="form-text text-muted">
+            The number of days the borrower has had a credit line
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="revol_bal">
+          Revolving Balance
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="revol_bal" name="revol_bal" class="form-control" placeholder="Revolving Balance" required autofocus>
+          <small class="form-text text-muted">
+            The borrower's revolving balance (amount unpaid at the end of the credit card billing cycle)
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="revol_util">
+          Revolving Line Utilization
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="revol_util" name="revol_util" class="form-control" placeholder="Revolving Line Utilization" required autofocus>
+          <small class="form-text text-muted">
+            The borrower's revolving line utilization rate (the amount of the credit line used relative to total credit available)
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="inq_last_6mths">
+          Inquiries in the last 6 months
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="inq_last_6mths" name="inq_last_6mths" class="form-control" placeholder="Inquiries in the last 6 months" required autofocus>
+          <small class="form-text text-muted">
+            The borrower's number of inquiries by creditors in the last 6 months
+          </small>
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="delinq_2yrs">
+          30+ days past due on a payment
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="delinq_2yrs" name="delinq_2yrs" class="form-control" placeholder="30+ days past due on a payment" required autofocus>
+          <small class="form-text text-muted">
+            The number of times the borrower had been 30+ days past due on a payment in the past 2 years
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label col-form-label-sm" for="pub_rec">
+          Derogatory Public Records
+        </label>
+        <div class="col-sm-10">
+          <input type="text" id="pub_rec" name="pub_rec" class="form-control" placeholder="Derogatory Public Records" required autofocus>
+          <small class="form-text text-muted">
+            The borrower's number of derogatory public records
+          </small>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-lg btn-primary btn-block">Predict</button>
+    
+      <div class="text-center mb-4">
+        <h3>Result</h3>
+        <p>{{ prediction_text }}</p>
+      </div>
+      
+    </form>
+   
+
+</body>
+
+</html>
