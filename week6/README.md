@@ -1,4 +1,4 @@
 ## Data ingestion assignment
 ----------------------------
 
-Here is only the notebook and the data take report. The data for this assignment y in the following [link](https://github.com/dilwong/FlightPrices)
+Here is only the code and the data intake report. The data for this assignment y in the following [link](https://github.com/dilwong/FlightPrices)
