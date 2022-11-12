@@ -1,0 +1,35 @@
+file_type: csv
+dataset_name: flights
+file_name: itineraries
+table_name: flight_prices
+inbound_delimiter: ","
+outbound_delimiter: "|"
+skip_leading_rows: 0
+columns: 
+    - legId
+    - searchDate
+    - flightDate
+    - startingAirport
+    - destinationAirport
+    - fareBasisCode
+    - travelDuration
+    - elapsedDays
+    - isBasicEconomy
+    - isRefundable
+    - isNonStop
+    - baseFare
+    - totalfare
+    - seatsRemaining
+    - totalTravelDistance
+    - segmentsDepartureTimeEpochSeconds
+    - segmentsDepartureTimeRaw
+    - segmentsArrivalTimeEpochSeconds
+    - segmentsArrivalTimeRaw
+    - segmentsArrivalAirportCode
+    - segmentsDepartureAirportCode
+    - segmentsAirlineName
+    - segmentsAirlineCode
+    - segmentsEquipmentDescription
+    - segmentsDurationInSeconds
+    - segmentsDistance
+    - segmentsCabinCode
