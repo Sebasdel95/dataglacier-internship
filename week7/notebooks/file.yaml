@@ -1,0 +1,29 @@
+file_type: csv
+dataset_name: bank
+file_name: bank-additional-full
+table_name: bank_clients_info
+inbound_delimiter: ";"
+outbound_delimiter: "\n"
+skip_leading_rows: 0
+columns: 
+    - age
+    - job
+    - marital
+    - education
+    - default
+    - housing
+    - loan
+    - contact
+    - month
+    - day_of_week
+    - duration
+    - campaign
+    - pdays
+    - previous
+    - poutcome
+    - emp.var.rate
+    - cons.price.idx
+    - cons.conf.idx
+    - euribor3m
+    - nr.employed
+    - y
